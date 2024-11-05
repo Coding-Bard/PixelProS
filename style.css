@@ -1,0 +1,445 @@
+:root {
+    --clr-accent-500: #6142FF;
+    --clr-accent-button: color-mix(in srgb, var(--clr-accent-500) 80%, white);
+    --clr-accent-darker: color-mix(in srgb, var(--clr-accent-500) 20%, #101216);
+
+    --clr-white: #fff;
+    --clr-section-background: color-mix(in srgb, var(--clr-white) 4%, #101216);
+
+    --clr-shade-100: #F4F4F4 ;
+    --clr-shade-500: #AFAFAF ;
+    --clr-shade-900: #101216 ;
+
+
+    --ff-primary:"Inter", serif;
+
+    --ff-body: var(--ff-primary);
+    --ff-heading: var(--ff-primary);
+
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semi-bold: 600;
+    --fw-bold: 700;
+
+
+    --fs-400: 0.875rem;
+    --fs-500: 1rem;
+    --fs-600: 1.125rem;
+    --fs-700: 1.5rem;
+    --fs-800: 2rem;
+    --fs-850: 3.0625rem;
+    --fs-900: 3.5rem;
+
+    --fs-body: var(--fs-500);
+    --fs-primary-heading: var(--fs-850);
+    --fs-secondary-heading: var(--fs-800);
+    --fs-nav: var(--fs-500);
+    --fs-button: var(--fs-500);
+
+    --padding-900: 9em;
+    --padding-700: 7em;
+    --padding-600: 6em;
+    --padding-500: 5em;
+
+    --heading-padding: 1rem;
+
+}
+
+@media (min-width: 50em) {
+    :root {
+        --fs-primary-heading: var(--fs-900);
+    }
+}
+
+
+
+
+
+
+
+
+
+/* CSS RESET */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+
+html,
+body {
+    height: 100%;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/* CSS RESET END */
+
+
+/* NAVIGATION */
+
+.primary-header {
+    padding: 24px 0;
+    background-color: var(--clr-shade-900);
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobile-nav-toggle {
+    display: none;
+}
+
+.nav-list {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: var(--clr-white);
+    font-weight: var(--fw-medium);
+}
+
+.nav-list a:hover,
+.nav-list a:focus {
+    color: var(--clr-accent-500);
+}
+
+
+
+@media (max-width:50em) {
+    .primary-navigation {
+        display: none;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        cursor: pointer;
+        background-color: transparent;
+        border: 0;
+        padding: .5em;
+    }
+
+    .mobile-nav-toggle img {
+        width: 40px;
+        height: auto;
+    }
+}
+
+
+
+/* HERO SECTION */
+
+.hero {
+    --dot-bg: var(--clr-shade-900);
+    --dot-color: var(--clr-accent-darker);
+    --dot-size: 2px;
+    --dot-space: 22px;
+      background:
+          linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+          linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+          var(--dot-color);
+
+          padding: var(--padding-700) 0;
+          
+}
+
+.hero-content {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+}
+
+.hero-content span {
+    color: var(--clr-accent-500);
+}
+
+@media (max-width: 50em) {
+    .hero-content{
+        text-align: left;
+        align-items: flex-start;
+    }
+}
+
+
+
+
+/* SERVICES SECTION */
+
+.services {
+    padding: var(--padding-500) 0;
+    background-color: var(--clr-section-background);
+}
+
+.service-wrapper {
+    margin-top: 2em;
+}
+
+.service-box {
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.04);
+}
+
+.md-heading {
+    font-size: var(--fs-700);
+    color: var(--clr-white);
+    padding: 12px 0 16px 0;
+    font-weight: var(--fw-medium);
+}
+
+
+
+@media (max-width:50em) {
+    .heading {
+        display: grid;
+        gap: var(--heading-padding);
+    }
+}
+
+
+
+
+/* PROCESS */
+
+
+.process {
+        padding: var(--padding-500) 0;
+    
+}
+
+.process-list {
+    padding: var(--padding-500) 0;
+    display: grid;
+    gap: 64px;
+}
+
+.process-heading p {
+    padding: 16px 0 24px 0;
+}
+
+
+.number {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width:2.5em;
+    height: 2.5em;
+    padding: 1em;
+    border-radius: 50vmax;
+    background-color: rgba(255, 255, 255, 0.05);
+    font-size: var(--fs-600);
+    font-weight: var(--fw-semi-bold);
+    color: var(--clr-accent-500);
+}
+
+
+
+
+
+/* REVIEWS */
+
+
+.reviews {
+    padding: var(--padding-500) 0;
+    background-color: var(--clr-section-background);
+}
+
+.reviews-wrapper {
+    padding-top: 2em;
+}
+
+
+.user-box {
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.04);
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 1.5rem;
+}
+
+.user img {
+    border-radius: 50vmax;
+    width: 64px;
+    height: 64px;
+}
+
+.user-name {
+    color: var(--clr-white);
+    font-size: var(--fs-600);
+    font-weight: var(--fw-medium);
+    padding-bottom: 2px;
+}
+
+.user-company {
+    font-style: italic;
+}
+
+.user-review {
+    display: grid;
+    gap: 12px;
+}
+
+
+
+
+
+
+
+
+
+/* GENERAL STYLING */
+
+body {
+    font-size: var(--fs-body);
+    font-family: var(--ff-body);
+    background-color: var(--clr-shade-900);
+    color: var(--clr-white);
+}
+
+
+h1 {
+    font-size: var(--fs-primary-heading);
+}
+
+h2 {
+    font-size: var(--fs-secondary-heading);
+}
+
+.button {
+    padding: .75em 1.5em;
+    border: 0;
+    border-radius: 50vmax;
+    background-color: var(--clr-accent-500);
+    color: var(--clr-white);
+    font-weight: var(--fw-medium);
+}
+
+.button:hover,
+.button:focus {
+    background-color: var(--clr-accent-button);
+}
+
+p {
+    color: var(--clr-shade-500);
+}
+
+
+
+
+
+
+/* UTILITY CLASSES */
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0,0,0,0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+
+  .container {
+    --max-width: 1248px;
+    --padding: 1rem;
+
+    width: min(var(--max-width), 100% - (var(--padding)*2));
+    margin-inline: auto;
+  }
+
+  .even-columns {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .grid-3-container {
+    display: grid;
+    gap: 1rem;
+  }
+
+  @media (min-width: 50em) {
+    .even-columns {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+
+    .grid-3-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+  }
