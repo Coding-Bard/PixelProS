@@ -28,7 +28,7 @@
     --fs-700: 1.5rem;
     --fs-800: 2rem;
     --fs-850: 3.0625rem;
-    --fs-900: 3.5rem;
+    --fs-900: 4.5rem;
 
     --fs-body: var(--fs-500);
     --fs-primary-heading: var(--fs-850);
@@ -85,6 +85,7 @@ ol[role='list'] {
 html,
 body {
     height: 100%;
+    scroll-behavior: smooth;
 }
 
 /* Set core root defaults */
@@ -114,7 +115,7 @@ svg {
 
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
+ @media (prefers-reduced-motion: reduce) {
   html:focus-within {
    scroll-behavior: auto;
   }
@@ -127,7 +128,7 @@ svg {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-}
+} 
 
 
 /* CSS RESET END */
@@ -138,6 +139,7 @@ svg {
 .primary-header {
     padding: 24px 0;
     background-color: var(--clr-shade-900);
+    border-bottom: 1px solid var(--clr-accent-darker);
 }
 
 .nav-wrapper {
@@ -202,7 +204,7 @@ svg {
           linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
           var(--dot-color);
 
-          padding: var(--padding-700) 0;
+          padding: 12rem 0;
           
 }
 
@@ -213,6 +215,7 @@ svg {
         align-items: center;
         justify-content: center;
         text-align: center;
+  
 }
 
 .hero h1 {
@@ -226,6 +229,11 @@ svg {
 
 
 @media (max-width: 50em) {
+
+    .hero {
+        padding: var(--padding-500) 0;
+    }
+
     .hero-content{
         text-align: left;
         align-items: flex-start;
@@ -280,11 +288,14 @@ svg {
 
 @media (max-width:50em) {
     
-
     .service-wrapper {
         margin-top: 2em;
         background-color: transparent;
         padding: 0;
+    }
+
+    .services .heading {
+        text-align: left;
     }
 }
 
@@ -406,6 +417,13 @@ svg {
 }
 
 
+@media (max-width: 50em) {
+    .reviews h2 {
+        text-align: left;
+    }
+}
+
+
 /* CONTACT */
 
 .contact {
@@ -507,10 +525,12 @@ footer {
     margin-top: 3em;
     padding: 1.5em 0;
     border-top: 1px solid var(--clr-accent-darker);
+    text-align: center;
 }
 
 .copyright span {
     color: var(--clr-accent-500);
+
 }
 
 
