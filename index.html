@@ -37,9 +37,9 @@
         <!-- HERO SECTION -->
         <section class="hero">
             <div class="container hero-content">
-                <h1>Pretvaramo vaše <span>ideje</span> 
-                    u digitalna <span>rešenja</span> </h1>
-                <p>Transformišemo vaše ideje u vrhunske digitalne proizvode &mdash; web sajtove, aplikacije i još mnogo toga.</p>
+                <h1>Pretvaramo vaše <span class="accent-color-span">ideje</span> 
+                    u digitalna <span class="accent-color-span">rešenja</span> </h1>
+                <p class="hero-subheading">Transformišemo vaše ideje u vrhunske digitalne proizvode &mdash; web sajtove, aplikacije i još mnogo toga.</p>
                 <button class="button">Zakažite konsultacije</button>
             </div>
         </section>
@@ -47,12 +47,12 @@
 
         <!-- SERVICES SECTION -->
         <section class="services">
-            <div class="container">
+            <div class="container service-wrapper">
                 <div class="heading">
                     <h2>Naše usluge</h2>
                     <p>Vaša vizija je naša inspiracija. Mi smo tim iskusnih dizajnera i programera posvećenih kreiranju digitalnih rešenja koja pomažu vašem biznisu da raste. </p>
                 </div>
-                <div class="grid-3-container service-wrapper">
+                <div class="grid-3-container service-box-wrapper">
                     <div class="service-box">
                         <img src="images/izrada sajta.svg" alt="">
                         <p class="md-heading">Izrada web sajtova</p>
@@ -99,32 +99,35 @@
                     <div>
                         <ol role="list" class="process-list">
                             <li class="process-item">
-                                <div class="number">1</div>
-                                <div>
-                                <p class="md-heading">Upoznavanje</p>
+                                <div class="process-item-number">
+                                    <div class="number">1</div>
+                                    <p class="md-heading">Upoznavanje</p>
+                                </div>
                                 <p>Razumemo vaše poslovne ciljeve i potrebe kako bismo osmislili najbolje rešenje.</p>
-                                </div>
                             </li>
                             <li class="process-item">
-                                <div class="number">2</div>
-                                <div>
-                                <p class="md-heading">Planiranje</p>
+                                <div class="process-item-number">
+                                    <div class="number">2</div>
+                                    <p class="md-heading">Planiranje</p>
+                                </div>
                                 <p>Pripremamo detaljan plan razvoja koji uključuje dizajn, tekstove, funkcionalnost i rokove.</p>
-                                </div>
+                                
                             </li>
                             <li class="process-item">
-                                <div class="number">3</div>
-                                <div>
-                                <p class="md-heading">Predlog resenja</p>
+                                <div class="process-item-number">
+                                    <div class="number">3</div>
+                                    <p class="md-heading">Predlog resenja</p>
+                                </div>
                                 <p>Kreiramo jedinstvena i optimizovana rešenja koja savršeno odgovaraju vašem brendu.</p>
-                                </div>
+                                
                             </li>
                             <li class="process-item">
-                                <div class="number">4</div>
-                                <div>
-                                <p class="md-heading">Izrada sajta</p>
-                                <p>Pre lansiranja, sve detaljno testiramo kako bismo osigurali besprekorno iskustvo za korisnike.</p>
+                                <div class="process-item-number">
+                                    <div class="number">4</div>
+                                    <p class="md-heading">Izrada sajta</p>
                                 </div>
+                                <p>Pre lansiranja, sve detaljno testiramo kako bismo osigurali besprekorno iskustvo za korisnike.</p>
+                                
                             </li>
                         </ol>
                     </div>
@@ -243,17 +246,30 @@
         <!-- CONTACT US -->
 
         <section class="contact">
-            <!-- <div class="container">
+            <div class="container">
                 <div class="even-columns">
-                    <div>
+                    <div class="contact-container">
                         <h2>Kontaktirajte Nas</h2>
                         <p>Imate projekat na umu? Kontaktirajte nas i zajedno ćemo kreirati digitalno rešenje koje odgovara vašim potrebama.</p>
-                        <p class="contact-info">Email: info@vasaagencija.com</p>
-                        <p class="contact-info">Telefon: +381 60 123 4567</p>
+                        <p>Email: <span class="accent-color-span">info@vasaagencija.com</span> </p>
+                        <p>Telefon: <span class="accent-color-span">+381 60 123 4567</span></p>
                     </div>
-                    <div></div>
+                    <div>
+                        <form class="contact-form" action="/submit" method="post">
+                            <label for="fullname">Ime i prezime:</label>
+                            <input placeholder="Petar Petrovic" data-input type="text" id="fullname" name="fullname" required><br><br>
+                    
+                            <label for="email">Email:</label>
+                            <input placeholder="adresa@email.com" data-input type="email" id="email" name="email" required><br><br>
+                    
+                            <label for="message">Poruka:</label><br>
+                            <textarea placeholder="Ukratko opisite projekat"  id="message" name="message" rows="6" required></textarea><br><br>
+                    
+                            <input class="button" type="submit" value="Pošaljite upit">
+                        </form>
+                    </div>
                 </div>
-            </div> -->
+            </div>
         </section>
 
     </main>
@@ -263,22 +279,25 @@
 
     <footer>
         <div class="container">
-            <div class="grid-3-container">
+            <div class="even-columns">
                 <div>
                     <img src="images/logo.svg" alt="">
-                    <p>Transformišemo vaše ideje u vrhunske digitalne proizvode – web sajtove, aplikacije i još mnogo toga.</p>
+                    <p class="footer-paragraph">Transformišemo vaše ideje u vrhunske digitalne proizvode &mdash; web sajtove, aplikacije i još mnogo toga.</p>
                 </div>
-                <div>
+                <div class="contact-footer">
                     <p class="footer-heading">Kontakt</p>
                     <p class="contact-info">kontakt@pixelprostudio.com</p>
                     <p class="contact-info">+381 60 123 4567</p>
-                </div>
-                <div>
                     <img src="images/insta.svg" alt="">
                 </div>
             </div>
         </div>
     </footer>
+    <div class="copyright">
+        <div class="container">
+        <p>Copyright @2024 <span class="accent-color-span">PixelProStudio</span></p>
+        </div>
+    </div>
 
 
 
